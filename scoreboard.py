@@ -22,8 +22,8 @@ class Scoreboard(Turtle):
         self.score += 1
         self.update_score()
 
-    def game_over(self):
+    def game_over(self): #game over
         self.goto(0, 0)
         self.color("red")
-        self.write("ZA TEBE JE OVDE GAME OVER", align="center", font=FONT)
+        self.write("GAME OVER", align="center", font=FONT)
 
