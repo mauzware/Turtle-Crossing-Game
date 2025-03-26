@@ -9,11 +9,11 @@ screen.setup(width=600, height=600)
 screen.tracer(0)
 
 
-jerry = Player()
+bimbo = Player()
 car_manager = CarManager()
 score = Scoreboard()
 screen.listen()
-screen.onkey(jerry.move_up, "Up")
+screen.onkey(bimbo.move_up, "Up")
 
 
 game_is_on = True
@@ -24,12 +24,12 @@ while game_is_on:
     car_manager.move_car()
 
     for car in car_manager.all_cars:
-        if car.distance(jerry) < 20:
+        if car.distance(bimbo) < 20:
             game_is_on = False
             score.game_over()
 
-    if jerry.ycor() > 280:
-        jerry.reset_player()
+    if bimbo.ycor() > 280:
+        bimbo.reset_player()
         score.level_increase()
         car_manager.speed_up()
 
